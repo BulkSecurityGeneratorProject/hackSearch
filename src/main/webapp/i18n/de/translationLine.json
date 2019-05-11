@@ -1,0 +1,26 @@
+{
+    "hackSearchApp": {
+        "translationLine": {
+            "home": {
+                "title": "Translation Lines",
+                "createLabel": "Translation Line erstellen",
+                "createOrEditLabel": "Translation Line erstellen oder bearbeiten"
+            },
+            "created": "Translation Line erstellt mit ID {{ param }}",
+            "updated": "Translation Line aktualisiert mit ID {{ param }}",
+            "deleted": "Translation Line gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Translation Line {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Translation Line"
+            },
+            "sndId": "Snd Id",
+            "text": "Text",
+            "timeStart": "Time Start",
+            "timeEnd": "Time End",
+            "episode": "Episode",
+            "captionId": "Caption Id"
+        }
+    }
+}

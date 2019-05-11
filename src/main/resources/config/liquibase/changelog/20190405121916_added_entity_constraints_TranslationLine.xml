@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity TranslationLine.
+    -->
+    <changeSet id="20190405121916-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="caption_id_id"
+                                 baseTableName="translation_line"
+                                 constraintName="fk_translation_line_caption_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="caption"/>
+
+    </changeSet>
+</databaseChangeLog>

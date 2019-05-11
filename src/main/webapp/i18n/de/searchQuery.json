@@ -1,0 +1,23 @@
+{
+    "hackSearchApp": {
+        "searchQuery": {
+            "home": {
+                "title": "Search Queries",
+                "createLabel": "Search Query erstellen",
+                "createOrEditLabel": "Search Query erstellen oder bearbeiten"
+            },
+            "created": "Search Query erstellt mit ID {{ param }}",
+            "updated": "Search Query aktualisiert mit ID {{ param }}",
+            "deleted": "Search Query gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Search Query {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Search Query"
+            },
+            "query": "Query",
+            "episode": "Episode",
+            "createdAt": "Created At"
+        }
+    }
+}

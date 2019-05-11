@@ -1,0 +1,39 @@
+{
+    "name": "Video",
+    "fields": [
+        {
+            "fieldName": "videoId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "episode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "soundcloud",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "caption",
+            "otherEntityRelationshipName": "videoId",
+            "relationshipName": "captionId"
+        }
+    ],
+    "changelogDate": "20190409193657",
+    "entityTableName": "video",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mood"
+}

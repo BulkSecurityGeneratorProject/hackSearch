@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="searchQuery">
+            <h2><span jhiTranslate="hackSearchApp.searchQuery.detail.title">Search Query</span> {{searchQuery.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="hackSearchApp.searchQuery.query">Query</span></dt>
+                <dd>
+                    <span>{{searchQuery.query}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.searchQuery.episode">Episode</span></dt>
+                <dd>
+                    <span>{{searchQuery.episode}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.searchQuery.createdAt">Created At</span></dt>
+                <dd>
+                    <span>{{searchQuery.createdAt}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/search-query-mood', searchQuery.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

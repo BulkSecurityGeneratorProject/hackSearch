@@ -1,0 +1,47 @@
+entity TranslationLine {
+    sndId Integer,
+    text String,
+    timeStart String,
+    timeEnd String,
+    episode Integer
+}
+
+entity Video {
+videoId String,
+title String,
+episode Integer,
+soundcloud String
+}
+
+entity Caption {
+captionId String,
+trackKind String,
+language String
+}
+
+entity SearchQuery {
+query String,
+episode Integer,
+createdAt ZonedDateTime
+}
+
+relationship OneToMany {
+  Video{captionId} to Caption{videoId}
+}
+
+relationship OneToMany {
+  Caption to TranslationLine{captionId}
+}
+
+
+
+dto * with mapstruct
+
+paginate TranslationLine with infinite-scroll
+
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+angularSuffix * with mood
+
+filter *

@@ -1,0 +1,42 @@
+{
+    "name": "Caption",
+    "fields": [
+        {
+            "fieldName": "captionId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trackKind",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "language",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "translationLine",
+            "otherEntityRelationshipName": "captionId",
+            "relationshipName": "translationLine"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "video",
+            "otherEntityRelationshipName": "captionId",
+            "relationshipName": "videoId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190410065541",
+    "entityTableName": "caption",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mood"
+}

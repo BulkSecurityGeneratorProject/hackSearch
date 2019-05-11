@@ -1,0 +1,25 @@
+{
+    "hackSearchApp": {
+        "caption": {
+            "home": {
+                "title": "Captions",
+                "createLabel": "Caption erstellen",
+                "createOrEditLabel": "Caption erstellen oder bearbeiten"
+            },
+            "created": "Caption erstellt mit ID {{ param }}",
+            "updated": "Caption aktualisiert mit ID {{ param }}",
+            "deleted": "Caption gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Caption {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Caption"
+            },
+            "captionId": "Caption Id",
+            "trackKind": "Track Kind",
+            "language": "Language",
+            "translationLine": "Translation Line",
+            "videoId": "Video Id"
+        }
+    }
+}

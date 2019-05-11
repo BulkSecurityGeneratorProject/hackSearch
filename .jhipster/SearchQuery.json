@@ -1,0 +1,28 @@
+{
+    "name": "SearchQuery",
+    "fields": [
+        {
+            "fieldName": "query",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "episode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createdAt",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190502150412",
+    "entityTableName": "search_query",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mood"
+}

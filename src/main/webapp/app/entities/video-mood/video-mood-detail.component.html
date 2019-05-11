@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="video">
+            <h2><span jhiTranslate="hackSearchApp.video.detail.title">Video</span> {{video.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="hackSearchApp.video.videoId">Video Id</span></dt>
+                <dd>
+                    <span>{{video.videoId}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.video.title">Title</span></dt>
+                <dd>
+                    <span>{{video.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.video.episode">Episode</span></dt>
+                <dd>
+                    <span>{{video.episode}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.video.soundcloud">Soundcloud</span></dt>
+                <dd>
+                    <span>{{video.soundcloud}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/video-mood', video.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

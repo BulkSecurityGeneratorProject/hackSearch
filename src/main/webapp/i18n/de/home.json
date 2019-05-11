@@ -1,0 +1,20 @@
+{
+    "home": {
+        "title": "Willkommmen bei Hacksuche",
+        "subtitle": "",
+        "logged": {
+            "message": "Sie sind als Benutzer \"{{username}}\" angemeldet."
+        },
+        "question": "Wenn Sie Fragen zu Hacksuche haben:",
+        "link": {
+            "homepage": "JHipster Hauptseite",
+            "stackoverflow": "JHipster auf Stack Overflow",
+            "bugtracker": "JHipster Fehlereinträge",
+            "chat": "JHipster Chat",
+            "follow": "kontaktieren Sie uns mit @java_hipster auf Twitter"
+        },
+        "like": "Wenn Sie JHipster mögen, vergessen Sie nicht uns einen Stern zu geben auf",
+        "github": "GitHub",
+        "notfound": "Episode {{episode}} im URL Parameter nicht gefunden"
+    }
+}

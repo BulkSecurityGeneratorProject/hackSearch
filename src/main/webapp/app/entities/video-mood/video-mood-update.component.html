@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-video-mood-heading" jhiTranslate="hackSearchApp.video.home.createOrEditLabel">Create or edit a Video</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!video.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="video.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="hackSearchApp.video.videoId" for="field_videoId">Video Id</label>
+                    <input type="text" class="form-control" name="videoId" id="field_videoId"
+                        [(ngModel)]="video.videoId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="hackSearchApp.video.title" for="field_title">Title</label>
+                    <input type="text" class="form-control" name="title" id="field_title"
+                        [(ngModel)]="video.title" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="hackSearchApp.video.episode" for="field_episode">Episode</label>
+                    <input type="number" class="form-control" name="episode" id="field_episode"
+                        [(ngModel)]="video.episode" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="hackSearchApp.video.soundcloud" for="field_soundcloud">Soundcloud</label>
+                    <input type="text" class="form-control" name="soundcloud" id="field_soundcloud"
+                        [(ngModel)]="video.soundcloud" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

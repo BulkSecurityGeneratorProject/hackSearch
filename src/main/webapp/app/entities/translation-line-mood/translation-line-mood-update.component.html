@@ -1,0 +1,56 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-translation-line-mood-heading" jhiTranslate="hackSearchApp.translationLine.home.createOrEditLabel">Create or edit a Translation Line</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!translationLine.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="translationLine.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="hackSearchApp.translationLine.sndId" for="field_sndId">Snd Id</label>
+                    <input type="number" class="form-control" name="sndId" id="field_sndId"
+                        [(ngModel)]="translationLine.sndId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="hackSearchApp.translationLine.text" for="field_text">Text</label>
+                    <input type="text" class="form-control" name="text" id="field_text"
+                        [(ngModel)]="translationLine.text" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="hackSearchApp.translationLine.timeStart" for="field_timeStart">Time Start</label>
+                    <input type="text" class="form-control" name="timeStart" id="field_timeStart"
+                        [(ngModel)]="translationLine.timeStart" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="hackSearchApp.translationLine.timeEnd" for="field_timeEnd">Time End</label>
+                    <input type="text" class="form-control" name="timeEnd" id="field_timeEnd"
+                        [(ngModel)]="translationLine.timeEnd" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="hackSearchApp.translationLine.episode" for="field_episode">Episode</label>
+                    <input type="number" class="form-control" name="episode" id="field_episode"
+                        [(ngModel)]="translationLine.episode" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="hackSearchApp.translationLine.captionId" for="field_captionId">Caption Id</label>
+                    <select class="form-control" id="field_captionId" name="captionId" [(ngModel)]="translationLine.captionIdId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="captionOption.id" *ngFor="let captionOption of captions; trackBy: trackCaptionById">{{captionOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="survey">
+            <h2><span jhiTranslate="hackSearchApp.survey.detail.title">Survey</span> {{survey.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="hackSearchApp.survey.text">Text</span></dt>
+                <dd>
+                    <span>{{survey.text}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.survey.timeStart">Time Start</span></dt>
+                <dd>
+                    <span>{{survey.timeStart}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.survey.timeEnd">Time End</span></dt>
+                <dd>
+                    <span>{{survey.timeEnd}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.survey.episode">Episode</span></dt>
+                <dd>
+                    <span>{{survey.episode}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/survey-mood', survey.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

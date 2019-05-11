@@ -1,0 +1,25 @@
+{
+    "hackSearchApp": {
+        "survey": {
+            "home": {
+                "title": "Surveys",
+                "createLabel": "Survey erstellen",
+                "createOrEditLabel": "Survey erstellen oder bearbeiten",
+                "search": "Suche nach Survey"
+            },
+            "created": "Survey erstellt mit ID {{ param }}",
+            "updated": "Survey aktualisiert mit ID {{ param }}",
+            "deleted": "Survey gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Survey {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Survey"
+            },
+            "text": "Text",
+            "timeStart": "Time Start",
+            "timeEnd": "Time End",
+            "episode": "Episode"
+        }
+    }
+}

@@ -1,0 +1,51 @@
+/* ==========================================================================
+Main page styles
+========================================================================== */
+
+/* wait autoprefixer update to allow simple generation of high pixel density media query */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    .hipster {
+        background: url('../../content/images/jhipster_family_member_1.svg') no-repeat center top;
+        background-size: contain;
+    }
+}
+
+@media (min-width: 480px) {
+    .hideColumn {
+        display: none;
+    }
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: inherit;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.example-option-img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+[dir='rtl'] .example-option-img {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+/* Structure */
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}

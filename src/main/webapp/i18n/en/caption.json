@@ -1,0 +1,25 @@
+{
+    "hackSearchApp": {
+        "caption": {
+            "home": {
+                "title": "Captions",
+                "createLabel": "Create a new Caption",
+                "createOrEditLabel": "Create or edit a Caption"
+            },
+            "created": "A new Caption is created with identifier {{ param }}",
+            "updated": "A Caption is updated with identifier {{ param }}",
+            "deleted": "A Caption is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Caption {{ id }}?"
+            },
+            "detail": {
+                "title": "Caption"
+            },
+            "captionId": "Caption Id",
+            "trackKind": "Track Kind",
+            "language": "Language",
+            "translationLine": "Translation Line",
+            "videoId": "Video Id"
+        }
+    }
+}

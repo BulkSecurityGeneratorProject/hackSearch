@@ -1,0 +1,32 @@
+{
+    "name": "Survey",
+    "fields": [
+        {
+            "fieldName": "text",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "timeStart",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "timeEnd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "episode",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190405121803",
+    "entityTableName": "survey",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mood"
+}

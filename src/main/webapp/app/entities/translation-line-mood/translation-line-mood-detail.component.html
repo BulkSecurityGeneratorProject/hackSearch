@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="translationLine">
+            <h2><span jhiTranslate="hackSearchApp.translationLine.detail.title">Translation Line</span> {{translationLine.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="hackSearchApp.translationLine.sndId">Snd Id</span></dt>
+                <dd>
+                    <span>{{translationLine.sndId}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.translationLine.text">Text</span></dt>
+                <dd>
+                    <span>{{translationLine.text}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.translationLine.timeStart">Time Start</span></dt>
+                <dd>
+                    <span>{{translationLine.timeStart}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.translationLine.timeEnd">Time End</span></dt>
+                <dd>
+                    <span>{{translationLine.timeEnd}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.translationLine.episode">Episode</span></dt>
+                <dd>
+                    <span>{{translationLine.episode}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.translationLine.captionId">Caption Id</span></dt>
+                <dd>
+                    <div *ngIf="translationLine.captionIdId">
+                        <a [routerLink]="['/caption-mood', translationLine.captionIdId, 'view']">{{translationLine.captionIdId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/translation-line-mood', translationLine.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

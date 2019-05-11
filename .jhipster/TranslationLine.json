@@ -1,0 +1,44 @@
+{
+    "name": "TranslationLine",
+    "fields": [
+        {
+            "fieldName": "sndId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "text",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "timeStart",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "timeEnd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "episode",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "caption",
+            "otherEntityRelationshipName": "translationLine",
+            "relationshipName": "captionId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190405121916",
+    "entityTableName": "translation_line",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mood"
+}

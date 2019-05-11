@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="caption">
+            <h2><span jhiTranslate="hackSearchApp.caption.detail.title">Caption</span> {{caption.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="hackSearchApp.caption.captionId">Caption Id</span></dt>
+                <dd>
+                    <span>{{caption.captionId}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.caption.trackKind">Track Kind</span></dt>
+                <dd>
+                    <span>{{caption.trackKind}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.caption.language">Language</span></dt>
+                <dd>
+                    <span>{{caption.language}}</span>
+                </dd>
+                <dt><span jhiTranslate="hackSearchApp.caption.videoId">Video Id</span></dt>
+                <dd>
+                    <div *ngIf="caption.videoIdId">
+                        <a [routerLink]="['/video-mood', caption.videoIdId, 'view']">{{caption.videoIdId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/caption-mood', caption.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
